@@ -2,10 +2,9 @@
 CarLot.setInventory();
 
 function populateDOM (array) {
-	console.log("populate dom:", array);
 	var HTML = "";
 	for (var i = 0; i < array.length; i++) {
-		HTML +=	`<div id="id-${array[i].id}" class="col-md-4 col-xs-4">
+		HTML +=	`<div id="id-${array[i].id}" class="col-md-4 col-xs-4 inventoryCard">
 		          <h3 class="cardHeadline">${array[i].make} ${array[i].model}</h3>
 		          <ul>
 		            <li>${array[i].color}</li>
@@ -17,5 +16,6 @@ function populateDOM (array) {
 	        	</div>`;
 	};
 	document.getElementById("inventory").innerHTML = HTML;
+	CarLot.activateEvents();
 }
 
