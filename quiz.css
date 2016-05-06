@@ -1,0 +1,36 @@
+/*-------------------------
+
+GLOBAL STYLES
+
+-------------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin-top: 100px;
+}
+
+/*-------------------------
+
+LAYOUT
+
+-------------------------*/
+
+#mainNav {
+	border: 1px solid black;
+	padding: 10px 0;
+}
+
+.form-group {
+	margin-left: 25px;
+}
+
+#mainContent {
+	border: 1px solid red;
+}
+
+#mainHeadline {
+	text-align: center;
+}
