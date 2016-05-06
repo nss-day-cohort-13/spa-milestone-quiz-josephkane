@@ -75,7 +75,7 @@ You operate a used car lot, and need to have an application where you can update
 
 function populatePage (inventory) {
   // Loop over the inventory and populate the page
-  
+
   // Now that the DOM is loaded, establish all the event listeners needed
   CarLot.activateEvents();
 }
@@ -106,3 +106,36 @@ var CarLot = (function () {
 
 })();
 ```
+
+
+
+    // {
+    //   "id": 4,
+    //   "make": "Toyota",
+    //   "model": "Camry",
+    //   "year": "2006",
+    //   "price": "$4,999",
+    //   "color": "slategrey",
+    //   "purchased": false,
+    //   "description": "You'll look great going to work!"
+    // },
+    // {
+    //   "id": 5,
+    //   "make": "Hummer",
+    //   "model": "H3",
+    //   "year": "2008",
+    //   "price": "$15,999",
+    //   "color": "grey",
+    //   "purchased": false,
+    //   "description": "Please don't buy me."
+    // },
+    // {
+    //   "id": 6,
+    //   "make": "Chevrolet",
+    //   "model": "Silverado",
+    //   "year": "2006",
+    //   "price": "$4,999",
+    //   "color": "lightgrey",
+    //   "purchased": false,
+    //   "description": "You live and work in the city. Do you really need this?"
+    // }

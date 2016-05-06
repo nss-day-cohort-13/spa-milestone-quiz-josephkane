@@ -34,3 +34,7 @@ LAYOUT
 #mainHeadline {
 	text-align: center;
 }
+
+.col-md-4 {
+	border: 1px dotted black;
+}
