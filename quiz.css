@@ -36,6 +36,6 @@ LAYOUT
 	text-align: center;
 }
 
-.col-md-4 {
-	border: 1px dotted black;
+.inventoryCard {
+	border: 2px solid black;
 }
