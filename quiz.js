@@ -17,6 +17,5 @@ function populateDOM (array) {
 	};
 	document.getElementById("inventory").innerHTML = HTML;
 	CarLot.activateEvents(array);
-	console.log(array);
 }
 
