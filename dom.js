@@ -4,7 +4,6 @@ var CarLot = (function (oldCarLot) {
 	var oldId = "";
 
 	oldCarLot.changeStyle = function (id, color) {
-		console.log(id, color);
 		document.getElementById(id).classList.add("border-thick");
 		clickCounter++;
 		if (clickCounter > 1) {
