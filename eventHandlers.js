@@ -1,20 +1,28 @@
 var CarLot = (function(oldCarLot){
 
+	var inventory = [];
 	var selectedId = "";
 	var userInput = document.getElementById("textInputBar");
+
+	oldCarLot.getInventory = function () {
+		return inventory;
+	},
+
+	oldCarLot.putJSONInInventory = function (array) {
+			for (var i = 0; i < array.length; i++) {
+				inventory.push(array[i]);
+			}
+		populateDOM(inventory);
+	}
 
 	oldCarLot.activateEvents = function (array) {
 		var inventoryCards = document.getElementsByClassName("inventoryCard");
 		var textInputBar = document.getElementById("textInputBar");
+		var submitButton = document.getElementById("submitButton");
 
-		textInputBar.addEventListener("click", function () {
-			if (selectedId === ""){
-
-			} else {
-
-			}
+		submitButton.addEventListener("click", function () {
+			oldCarLot.modifyArray(selectedId);
 		});
-
 
 		for (var i = 0; i < inventoryCards.length; i++) {
 			inventoryCards[i].addEventListener("click", function(e) {
@@ -38,6 +46,11 @@ var CarLot = (function(oldCarLot){
 		textInputBar.addEventListener("keyup", function (event) {
 			carDescription.innerHTML = userInput.value;
 		});
+	}
+
+	oldCarLot.modifyArray = function (id) {
+		inventory[(id.slice(3) - 1)].description = userInput.value;
+		populateDOM(inventory);
 	}
 
 	return oldCarLot;
