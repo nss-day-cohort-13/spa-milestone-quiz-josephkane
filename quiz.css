@@ -21,6 +21,8 @@ LAYOUT
 #mainNav {
 	border: 1px solid black;
 	padding: 10px 0;
+	margin-top: 0;
+	background-color: whitesmoke;
 }
 
 .form-group {
@@ -30,6 +32,8 @@ LAYOUT
 #mainContent {
 	border: 1px solid red;
 	min-height: 1000px;
+	width: 95%;
+	margin: 0 auto;
 }
 
 #mainHeadline {
@@ -37,7 +41,7 @@ LAYOUT
 }
 
 .inventoryCard {
-	min-height: 210px;
+	min-height: 230px;
 	border-width: 2px;
 	border-style: solid;
 }
