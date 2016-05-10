@@ -3,30 +3,22 @@ var CarLot = (function (oldCarLot) {
 	var clickCounter = 0;
 	var oldId = "";
 
-	oldCarLot.getOldId = function () {
-		return oldId;
-	}
-
 	oldCarLot.changeStyle = function (id, color) {
-		console.log("passed id:", id);
-		document.getElementById(id).style.border = `4px solid ${color}`;
-		// var identifier = id.slice(3);
-		// identifier = parseInt(identifier);
+		console.log(id, color);
+		document.getElementById(id).classList.add("border-thick");
 		clickCounter++;
 		if (clickCounter > 1) {
-			oldCarLot.changeStyleBack(oldId, clickCounter);
+			oldCarLot.changeStyleBack(oldId);
 			oldId = id
 		} else {
 			oldId = id;
-			console.log("old id:", oldId);
 		}
+		oldCarLot.getSelectedId(id);
+		document.getElementById("textInputBar").focus();
 	}
 
 	oldCarLot.changeStyleBack = function (id, clickCounter) {
-		console.log("id:", id);
-		console.log("cc:", clickCounter);
-		document.getElementById(id).style.border = `2px solid black`;
-
+		document.getElementById(id).classList.remove("border-thick");
 	}
 
 	return oldCarLot;

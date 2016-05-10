@@ -37,5 +37,11 @@ LAYOUT
 }
 
 .inventoryCard {
-	border: 2px solid black;
+	min-height: 210px;
+	border-width: 2px;
+	border-style: solid;
+}
+
+.border-thick {
+	border-width: 4px;
 }
