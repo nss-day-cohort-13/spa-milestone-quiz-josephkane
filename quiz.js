@@ -12,7 +12,6 @@ function populateDOM (array) {
 		            <li id="desc-${i + 1}">${array[i].description}</li>
 		            <li>${array[i].price}</li>
 		          </ul>
-		          <h4 class="availability"></h4>
 	        	</div>`;
 	};
 	document.getElementById("inventory").innerHTML = HTML;

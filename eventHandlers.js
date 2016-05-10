@@ -9,7 +9,21 @@ var CarLot = (function(oldCarLot){
 		var submitButton = document.getElementById("submitButton");
 
 		submitButton.addEventListener("click", function () {
-			oldCarLot.setNewDescription(selectedId, userInput);
+			if (userInput.value === "") {
+
+			} else {
+				oldCarLot.setNewDescription(selectedId, userInput);
+			}
+		});
+
+		userInput.addEventListener("keyup", function (event) {
+			if (event.keyCode === 13) {
+				if (userInput.value === "") {
+
+				} else {
+					oldCarLot.setNewDescription(selectedId, userInput);
+				}
+			}
 		});
 
 		for (var i = 0; i < inventoryCards.length; i++) {
