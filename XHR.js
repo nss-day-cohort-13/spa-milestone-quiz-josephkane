@@ -22,6 +22,7 @@ var CarLot = (function (){
 		},
 
 		setNewDescription: function(id, userInput) {
+			console.log(id);
 			inventory[(id.slice(3) - 1)].description = userInput.value;
 			populateDOM(inventory);
 		}
